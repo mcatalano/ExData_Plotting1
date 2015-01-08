@@ -1,3 +1,5 @@
+df <- read.csv("household_power_consumption.txt", sep = ";", stringsAsFactors = F)
+
 df2 <- subset(df, Date == "1/2/2007" | Date == "2/2/2007")
 
 df2$DateTime <- as.POSIXct(paste(df2$Date, df2$Time), format="%d/%m/%Y %H:%M:%S") 
